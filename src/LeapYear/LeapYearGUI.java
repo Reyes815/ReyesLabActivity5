@@ -28,7 +28,7 @@ public class LeapYearGUI extends JFrame {
     }
 
 
-    public class inpHandler implements ActionListener{
+    public class inpHandler implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
             String inp = tfYear.getText();
@@ -38,18 +38,16 @@ public class LeapYearGUI extends JFrame {
             try {
                 double numYear = Double.parseDouble(inp);
 
-                if (((numYear % 4 == 0) && (numYear % 100!= 0)) || (numYear%400 == 0)){
+                tfYear.setText("");
+                if (((numYear % 4 == 0) && (numYear % 100 != 0)) || (numYear % 400 == 0)) {
                     JOptionPane.showMessageDialog(null, leap);
                 } else {
                     JOptionPane.showMessageDialog(null, notleap);
                 }
 
             } catch (NumberFormatException x) {
-                System.out.println("");
+                System.out.println();
             }
-
         }
     }
-
-
 }
