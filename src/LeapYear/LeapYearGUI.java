@@ -24,9 +24,7 @@ public class LeapYearGUI extends JFrame {
     public LeapYearGUI() {
         setTitle("Leap Year Checker");
         btnCheckYear.addActionListener(handler);
-
     }
-
 
     public class inpHandler implements ActionListener {
         @Override
