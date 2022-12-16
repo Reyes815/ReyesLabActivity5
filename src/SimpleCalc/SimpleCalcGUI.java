@@ -45,14 +45,19 @@ public class SimpleCalcGUI extends JFrame {
             try {
                 int num1 = Integer.parseInt(inp1);
                 int num2 = Integer.parseInt(inp2);
-                if (operation.equals("+")){
-                    total = num1 + num2;
-                } else if (operation.equals("-")){
-                    total = num1 - num2;
-                } else if (operation.equals("*")){
-                    total = num1 * num2;
-                } else if (operation.equals("/")){
-                    total = num1 / num2;
+                switch (operation) {
+                    case "+":
+                        total = num1 + num2;
+                        break;
+                    case "-":
+                        total = num1 - num2;
+                        break;
+                    case "*":
+                        total = num1 * num2;
+                        break;
+                    case "/":
+                        total = num1 / num2;
+                        break;
                 }
             } catch (NumberFormatException x) {
                 System.out.println();
