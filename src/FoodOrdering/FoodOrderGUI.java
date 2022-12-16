@@ -75,7 +75,6 @@ public class FoodOrderGUI extends JFrame implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
             JOptionPane.showMessageDialog(null,"The total price is Php " + (total - (total * disc)) );
-            total = 0;
         }
     }
 
